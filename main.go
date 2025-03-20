@@ -31,6 +31,9 @@ func contactHandler(renderer prism.Renderer) http.HandlerFunc {
 	}
 }
 
+//go:embed web
+var webFS embed.FS
+
 func main() {
 	cfg := prism.Config{
 		LayoutPath:   "web/layouts/*.html",
